@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+}
+
+#main {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+#clock {
+  font-family: "Droid Sans Mono";
+  font-size: 72px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+footer.navbar-default.navbar-fixed-bottom {
+  padding: 5px 0;
+  background-color: transparent;
+}
+
+.container-fluid {
+  width: 480px;
+}
+
+@media (max-width: 480px) {
+  .container-fluid {
+    width: 100%;
+  }
+  #clock {
+    font-size: 300%;
+    font-size: 16vw;
+  }
+}
+
+@media (max-height: 320px) {
+  #status {
+    display: none;
+  }
+}
