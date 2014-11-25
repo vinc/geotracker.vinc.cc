@@ -14,6 +14,12 @@ $(function() {
     Mustache.parse(template);
   });
 
+  function updateClock() {
+    var clock = moment.unix(state.duration - 3600);
+
+    $('#clock').text(clock.format('HH:mm:ss'));
+  }
+
   function updateStatus() {
     var accuracy;
     var n = state.positions.length;
@@ -65,9 +71,10 @@ $(function() {
     state.duration = 0;
     state.positions = [];
     
+    updateClock();
     idClock = setInterval(function() {
-      var clock = moment.unix(++state.duration - 3600);
-      $('#clock').text(clock.format('HH:mm:ss'));
+      state.duration++;
+      updateClock();
     }, 1000);
   });
 
