@@ -4,17 +4,14 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  flex-direction: column;
   height: 100%;
-}
-
-#main {
-  align-items: center;
   display: flex;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  top: 0px;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 #clock {
@@ -24,11 +21,19 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  width: 100%;
 }
 
-footer.navbar-default.navbar-fixed-bottom {
+.navbar-static-top {
+  align-self: flex-start;
+}
+
+.navbar-static-bottom {
+  align-self: flex-end;
   padding: 5px 0;
   background-color: transparent;
+  border: none;
+  transition: opacity 0.5s; /* FIXME */
 }
 
 .container-fluid {

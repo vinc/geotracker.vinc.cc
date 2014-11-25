@@ -19,7 +19,7 @@
             <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
-    <body>
+    <body style="opacity:0">
       <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -32,13 +32,13 @@
         <p id="clock" class="text-center text-muted">00:00:00</p>
       </div>
 
-      <footer class="navbar-default navbar-fixed-bottom">
+      <footer class="navbar navbar-default navbar-static-bottom">
         <div class="container-fluid">
           <p id="status" class="text-muted">Accuracy: none</p>
 
           <p>
             <a id="start" role="button" class="btn btn-block btn-lg btn-success disabled">Start</a>
-            <a id="stop" role="button" class="btn btn-block btn-lg btn-danger" download="session.gpx" style="display:none">Stop</a>
+            <a id="stop" role="button" class="btn btn-block btn-lg btn-danger" download="export.gpx" style="display:none">Stop</a>
           </p>
 
           <pre id="gpx" style="display:none"></pre>

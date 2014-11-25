@@ -2,14 +2,14 @@
 <gpx version="1.1">
   <trk>
     <name>{{startedAt}}</name>
-    {{#positions}}
     <trkseg>
+      {{#positions}}
       <trkpt lat="{{latitude}}" lon="{{longitude}}">
         <ele>{{altitude}}</ele>
         <speed>{{speed}}</speed>
         <time>{{date}}</time>
       </trkpt>
+      {{/positions}}
     </trkseg>
-    {{/positions}}
   </trk>
 </gpx>
